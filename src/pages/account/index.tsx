@@ -33,16 +33,17 @@ const AccountPage: React.FC = () => {
     skip: !`Bearer ${cookies.token}`,
   });
 
+  
   if (loading) {
     return <LoadingSpinner />;
   }
-
+  
   if (error) {
     return <ErrorComponent message={error.message} />;
   }
-
+  
   return (
-    <AccountCard userData={data} onLogout={handleLogout}/>
+    <AccountCard userData={data.user} onLogout={handleLogout}/>
   );
 };
 

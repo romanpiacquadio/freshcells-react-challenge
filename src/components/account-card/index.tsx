@@ -12,6 +12,7 @@ interface AccountCardProps {
 }
 
 const AccountCard: React.FC<AccountCardProps> = ({ userData, onLogout }) => {
+
   return (
     <Box display="flex" justifyContent="center" alignItems="center" height="100vh">
       <Card sx={{ maxWidth: 600, width: '100%' }}>
